@@ -6,10 +6,10 @@
     "your-project": {
       "hosting": {
         "e2e": [
-          "playwright-report"
+          "your-SITE_ID-for-playwright"
         ],
         "jest": [
-          "coverage"
+          "your-SITE_ID-for-jest-coverage"
         ]
       }
     }
