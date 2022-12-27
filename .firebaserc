@@ -6,10 +6,10 @@
     "fir-report-pr": {
       "hosting": {
         "e2e": [
-          "playwright-report"
+          "playwright-report-demo"
         ],
         "jest": [
-          "coverage/lcov-report"
+          "jest-coverage-demo"
         ]
       }
     }
