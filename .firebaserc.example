@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "your-project"
+  },
+  "targets": {
+    "your-project": {
+      "hosting": {
+        "e2e": [
+          "playwright-report"
+        ],
+        "jest": [
+          "coverage"
+        ]
+      }
+    }
+  }
+}

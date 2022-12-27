@@ -1,0 +1,26 @@
+name: Playwright Tests and Preview hosting for test-report
+on: pull_request
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 7.20.0
+    - name: Install dependencies
+      run: pnpm install
+    - name: Install Playwright Browsers
+      run: pnpm dlx playwright install --with-deps
+    - name: Run Playwright tests
+      run: pnpm dlx playwright test
+    - uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: '${{ secrets.GITHUB_TOKEN }}'
+        firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIR_REPORT_PR }}'
+        projectId: fir-report-pr
+        target: e2e
