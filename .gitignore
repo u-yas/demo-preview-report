@@ -4,5 +4,4 @@ node_modules/
 /playwright/.cache/
 /playwright-report/
 /coverage/
-.firebaserc
 firebase-debug.log

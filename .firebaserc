@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "fir-report-pr"
+  },
+  "targets": {
+    "fir-report-pr": {
+      "hosting": {
+        "e2e": [
+          "playwright-report"
+        ],
+        "jest": [
+          "coverage/lcov-report"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
