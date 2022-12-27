@@ -14,5 +14,6 @@
     "test:all": "pnpm run test && pnpm run e2e",
     "local:cov": "firebase emulators:start --only hosting:jest",
     "local:e2e": "firebase emulators:start --only hosting:e2e"
-  }
+  },
+  "packageManager": "pnpm@7.20.0"
 }
